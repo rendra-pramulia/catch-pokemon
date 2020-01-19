@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+header {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  background-image: url('./assets/image/grass.png');
+  box-shadow: 0 1px 17px rgba(0, 0, 0, 0.29);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-logo {
+  padding-top: 15px;
+  max-width: 180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.img-ball {
+  max-width: 35px;
+}
+
+.my-poke {
+    min-width: 20px;
+    min-height: 20px;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+    background-color: #b7892b;
+    border-radius: 18px;
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    padding: 0 4px;
+    transform: translate(30%,-8%);
+}
+
+@media (min-width: 1400px) {
+  .m-container {
+    max-width: 420px;
+  }
+  .my-poke {
+    right: 815px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.align-right {
+  float: right;
+}
+.align-left {
+  float: left;
+}
+
+.content-scroll {
+    margin-top: 85px;
+    position: relative;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-circle-wrapper {
+  background:rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: block;
+  margin-top: 8px;
+  margin-right: 25px;
+  padding: 10px;
+}
+
+img {
+  display:block;
+}
+
+.poke-list > ul {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 1rem;
+  list-style: none;
+}
+
+.poke-list > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.poke-list > ul > li > img {
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+.poke-list > ul > li > a {
+  font-size: 12px;
+  padding: .5rem 1rem;
+  margin: .5rem;
+  background-color: goldenrod;
+  text-decoration: none;
   color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: block;
+  transition: all .3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poke-list > ul > li > a:hover {
+  opacity: .6;
 }
